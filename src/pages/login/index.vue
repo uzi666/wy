@@ -43,8 +43,9 @@ export default {
     return {
       isSended: false, // 是否已发送请求
       isTypePassWord: true,
-      userName: "",
-      password: "",
+      userName: "test1",
+      
+      password: "12",
     };
   },
   methods: {
@@ -52,21 +53,27 @@ export default {
     changeInputType() {
       this.isTypePassWord = !this.isTypePassWord;
     },
-    // 登录 
+    // 登录
     login() {
       /* if (this.userName === "" || this.password === "") {
         this.$toast.fail('请输入账号密码');
         return;
       }
       this.isSended = true;
-      this.$http.post("/login", {
-          loginId: this.userName,
-          password: this.password
-      }).then(res => {
-          this.$router.push(`/index/`);
-          this.isSended = false;
-      }) */
-      this.$router.push(`/index/`);
+      this.$xhr('login',{
+        name: this.userName,
+        password: this.password
+      }).success(res => {
+        sessionStorage.setItem('token', res.token)
+        sessionStorage.setItem('userName', res.data.name)
+        sessionStorage.setItem('userId', res.data.id)
+        sessionStorage.setItem('identity', res.data.identity)
+        this.$router.push(`/index/`);
+        this.isSended = false;
+      }).error(err => {
+        this.$message.error(err)
+      })
+
     }
   },
 };
