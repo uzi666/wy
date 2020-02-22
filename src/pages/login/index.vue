@@ -52,7 +52,7 @@ export default {
     changeInputType() {
       this.isTypePassWord = !this.isTypePassWord;
     },
-    // 登录 
+    // 登录
     login() {
       if (this.userName === "" || this.password === "") {
         /* alert("请输入账号密码"); */
@@ -60,13 +60,20 @@ export default {
         return;
       }
       this.isSended = true;
-      this.$http.post("/login", {
-          loginId: this.userName,
-          password: this.password
-      }).then(res => {
-          this.$router.push(`/index/`);
-          this.isSended = false;
+      this.$xhr('login',{
+        name: this.userName,
+        password: this.password
+      }).success(res => {
+        sessionStorage.setItem('token', res.token)
+        sessionStorage.setItem('userName', res.data.name)
+        sessionStorage.setItem('userId', res.data.id)
+        sessionStorage.setItem('identity', res.data.identity)
+        this.$router.push(`/index/`);
+        this.isSended = false;
+      }).error(err => {
+        this.$message.error(err)
       })
+
     }
   },
 };

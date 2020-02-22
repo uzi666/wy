@@ -7,10 +7,12 @@ import 'swiper/dist/css/swiper.css'
 import axios from 'axios';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import Vant from 'vant';
+import xhr from '../src/xhr'
 
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 Vue.config.productionTip = false
 Vue.use(MetaInfo)
+Vue.use(xhr)
 Vue.use(Vant);
 Vue.prototype.axios = axios;
 
