@@ -7,11 +7,7 @@ import 'swiper/dist/css/swiper.css'
 import axios from 'axios';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import Vant from 'vant';
-<<<<<<< HEAD
-import 'vant/lib/index.css';
-=======
 import xhr from '../src/xhr'
->>>>>>> e366a5cec47c4e4803d8efc0c374f4e1fddbdecc
 
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 Vue.config.productionTip = false

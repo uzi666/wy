@@ -55,7 +55,7 @@ export default {
     },
     // 登录
     login() {
-      /* if (this.userName === "" || this.password === "") {
+      if (this.userName === "" || this.password === "") {
         this.$toast.fail('请输入账号密码');
         return;
       }
@@ -82,4 +82,3 @@ export default {
 <style lang="scss">
 @import "./style.scss";
 </style>
-
