@@ -43,6 +43,30 @@ export default {
           path: "/index"
         },
         {
+          name: "库存管理",
+          path: "/inventory"
+        },
+        {
+          name: "工作管理",
+          path: "/work"
+        },
+        {
+          name: "费用管理",
+          path: "/cost"
+        },
+        {
+          name: "采购管理",
+          path: "/procurement"
+        },
+        {
+          name: "车辆管理",
+          path: "/vehicle"
+        },
+        {
+          name: "公章管理",
+          path: "/chapter"
+        },
+        {
           name: "退出",
           path: "/"
         },

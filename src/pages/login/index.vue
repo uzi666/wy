@@ -54,9 +54,8 @@ export default {
     },
     // 登录 
     login() {
-      if (this.userName === "" || this.password === "") {
-        /* alert("请输入账号密码"); */
-        Toast.fail('请输入账号密码');
+      /* if (this.userName === "" || this.password === "") {
+        this.$toast.fail('请输入账号密码');
         return;
       }
       this.isSended = true;
@@ -66,7 +65,8 @@ export default {
       }).then(res => {
           this.$router.push(`/index/`);
           this.isSended = false;
-      })
+      }) */
+      this.$router.push(`/index/`);
     }
   },
 };
