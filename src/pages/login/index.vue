@@ -43,8 +43,9 @@ export default {
     return {
       isSended: false, // 是否已发送请求
       isTypePassWord: true,
-      userName: "",
-      password: "",
+      userName: "test1",
+      
+      password: "12",
     };
   },
   methods: {
