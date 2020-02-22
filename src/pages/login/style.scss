@@ -1,0 +1,138 @@
+@import "../../assets/style/base.scss";
+
+#app,
+body,
+html {
+  height: 100%;
+}
+
+.login {
+  user-select: none;
+  width: 750px;
+  min-height: 100%;
+  background-color: #7da3ff;
+  background-image: url("../../assets/image/bgImage-login.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  .title {
+    padding-top: 220px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .info {
+    margin-top: 56px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 1.4px;
+  }
+
+  .login-box {
+    width: 640px;
+    height: 516px;
+    margin: 139px auto 0;
+
+    .inputbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 416px;
+      background: #fff;
+
+      .model {
+        position: relative;
+        width: 500px;
+        height: 70px;
+        margin-top: 100px;
+        border-bottom: 1px solid #ccc;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding-right: 80px;
+          outline: none;
+          border: 0;
+          font-size: 28px;
+          color: #333;
+          background-color: transparent;
+          z-index: 1;
+          &:focus + .placeholder {
+            font-size: 20px;
+            bottom: 70px;
+          }
+        }
+
+        .placeholder {
+          position: absolute;
+          font-size: 30px;
+          letter-spacing: 1.4px;
+          color: #999;
+          left: 0;
+          bottom: 30px;
+          transition: all 300ms linear;
+        }
+
+        .active {
+          font-size: 20px;
+          bottom: 70px;
+        }
+
+        .icon {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          right: 0;
+          bottom: 0;
+          color: #000;
+          z-index: 1;
+          .icon-yanjing1 {
+            font-size: 18px;
+          }
+          .icon-yanjing {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    button {
+      display: block;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      border: none;
+      outline: none;
+      font-size: 40px;
+      color: #fff;
+      text-align: center;
+      background-color: $themeColor;
+
+      &:active {
+        opacity: 0.9;
+      }
+      &:disabled:active {
+        opacity: 1;
+      }
+
+      .md-icon {
+        vertical-align: middle;
+      }
+    }
+  }
+}
